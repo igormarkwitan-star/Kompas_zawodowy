@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kompas Zawodowy - Świadomy wybór kariery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Nagłówek z nawigacją -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-compass"></i>
+                <h1>Kompas Zawodowy</h1>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+                        <!--  dark mode toggle -->
+            <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Strona główna</a></li>
+                    <li><a href="#about">O nas</a></li>
+                    <li><a href="#professions">Zawody</a></li>
+                    <li><a href="#ib-cas">IB / CAS</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+               <!--  dark mode toggle -->
+            <!-- <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button> -->
+        </div>
+    </header>
+
+    <!-- Sekcja główna -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Świadomy wybór kariery</h2>
+            <p>Wspieramy uczniów w świadomym wyborze ścieżki kariery, pokazujemy różnorodne możliwości zawodowe oraz wskazujemy, na co warto zwrócić uwagę przy podejmowaniu decyzji o przyszłości.</p>
+            <a href="#professions" class="btn">Odkryj zawody</a>
+            <a href="#contact" class="btn btn-outline">Skontaktuj się z nami</a>
+        </div>
+    </section>
+
+    <!-- Sekcja o nas -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">O nas</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>Kompas Zawodowy</strong> to projekt społeczny stworzony w ramach <strong>Zwolnieni z teorii</strong>. Jesteśmy uczniami z <strong>IX LO w Bydgoszczy</strong> oraz <strong>Zespołu Szkół Elektronicznych nr 7 im. Wojska Polskiego w Bydgoszczy</strong>. Naszym celem jest wspieranie uczniów w świadomym wyborze ścieżki kariery, pokazanie różnorodnych możliwości zawodowych oraz wskazanie, na co warto zwrócić uwagę przy podejmowaniu decyzji o przyszłości. Wierzymy, że dobra orientacja zawodowa to klucz do spełnienia i satysfakcji w dorosłym życiu.</p>
+                    <p>Jesteśmy siedmioosobową grupą uczniów z 3 i 4 klasy programu z międzynarodową maturą (IB), jak i Technikum Elektronicznego. Poprzez nagrywanie podcastów z osobami pracującymi w danych branżach, które ciekawie przedstawiają swoje doświadczenie zawodowe, chcemy dotrzeć do większego grona ludzi, aby każdy miał szansę skorzystania z tego materiału.</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 50px; color: var(--primary); text-align: center;">Nasz zespół</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4>Laura Wolińska</h4>
+                    <p>Social media i przeprowadzanie wywiadów</p>
+                </div>
+                <div class="team-member">
+                    <h4>Alicja Waszak</h4>
+                    <p>Social media i przeprowadzanie wywiadów</p>
+                </div>
+                <div class="team-member">
+                    <h4>Julia Tybuszewska</h4>
+                    <p>Dokumentacja, formularze</p>
+                </div>
+                <div class="team-member">
+                    <h4>Alicja Wołgajew</h4>
+                    <p>Grafika</p>
+                </div>
+                <div class="team-member">
+                    <h4>Igor Markwitan</h4>
+                    <p>Strona internetowa</p>
+                </div>
+                <div class="team-member">
+                    <h4>Natalia Bobicz</h4>
+                    <p>Osoba wspierająca doświadczeniem</p>
+                </div>
+                <div class="team-member">
+                    <h4>Agata Maklakiewicz</h4>
+                    <p>Osoba wspierająca</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja zawody -->
+    <section id="professions">
+        <div class="container">
+            <h2 class="section-title">Poznaj różne zawody</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Posłuchaj naszych podcastów z profesjonalistami z różnych branż. Dowiedz się, jak wygląda ich praca na co dzień, jakie mają wyzwania i satysfakcje.</p>
+        
+            
+            <div class="professions-grid">
+                <!-- Psycholog -->
+                <div class="profession-card active" data-category="psychologist">
+                    <div class="profession-header">
+                        <h3>Psycholog</h3>
+                    </div>
+                    <div class="profession-body">
+                        <p>Rozmowa z Pauliną Marczyńską, psycholożką w szpitalu dziecięcym z 17-letnim doświadczeniem w pracy z dziećmi i ich rodzicami. Specjalistką w dziedzinie terapii interwencyjnej i pourazowej.</p>
+                        
+                        <div class="profession-quote">
+                            <p><i class="fas fa-quote-left"></i> Jeżeli lubisz ludzi, jesteś empatyczny oraz chcesz pomagać innym to wybierz studia psychologiczne i nie załamuj się pierwszymi problemami. To szeroko otwiera oczy.</p>
+                        </div>
+                        
+                        <div class="podcast-info">
+                            <p><strong>Tytuł:</strong> Cała prawda o zawodzie psychologa w szpitalu dziecięcym</p>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/7s232tRX2ZfE0dLplIiafG?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <a href="https://open.spotify.com/episode/7s232tRX2ZfE0dLplIiafG?si=b362aa8538bf42b1" class="listen-btn" target="_blank"><i class="fas fa-headphones"></i> Słuchaj podcastu</a>
+                        </div>
+                    </div>
+                    </div>
+                <!-- MACIEK MUSIAŁ -->
+                <div class="profession-card active" data-category="actor">
+                    <div class="profession-header">
+                        <h3>Aktor</h3>
+                    </div>
+                    <div class="profession-body">
+                        <p>Rozmowa z Maciekiem Musiałem, akterem teatru i kinematografii, który podzielił się swoim doświadczeniem związanym z życiem w branży artystycznej.</p>
+                        
+                        <div class="profession-quote">
+                            <p><i class="fas fa-quote-left"></i> fajny cytacik z gadki z maciusiem</p>
+                        </div>
+                        
+                        <div class="podcast-info">
+                            <p><strong>Tytuł:</strong> tytuł gadki z mackiem na spoti</p>
+                            <!-- OSADZENIE ZE SPOTI <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/7s232tRX2ZfE0dLplIiafG?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+                            <a href="link do gadki z maćkiem na spoti" class="listen-btn"><i class="fas fa-headphones"></i> Słuchaj podcastu</a>
+                        </div>
+                    </div>
+                </div>        
+
+                <!-- Nauczyciel -->
+                <div class="profession-card active" data-category="teacher">
+                    <div class="profession-header">
+                        <h3>Nauczyciel</h3>
+                    </div>
+                    <div class="profession-body">
+                        <p>Rozmowa z Jolantą Markwitan, nauczycielką języka polskiego z 23-letnim stażem, która pracuje w szkole podstawowej nr 10 im. Jana Kochanowskiego oraz 4 liceum dla dorosłych przy ZSEA</p>
+                        
+                        <div class="profession-quote">
+                            <p><i class="fas fa-quote-left"></i> Nauczyciel to nie tylko przekazywanie wiedzy, ale też inspirowanie do samodzielnego myślenia i pokazywanie, że nauka może być pasjonującą przygodą.</p>
+                        </div>
+                        
+                        <div class="podcast-info">
+                            <p><strong>Tytuł:</strong> Czy nauczyciel to jeszcze zawód z misją?</p>
+                            <!-- OSADZENIE ZE SPOTI <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/7s232tRX2ZfE0dLplIiafG?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+                            <a href="link do odcinka" class="listen-btn" target="_blank"><i class="fas fa-headphones"></i> Słuchaj podcastu</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Inżynier -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja IB/CAS -->
+    <section id="ib-cas">
+        <div class="container">
+            <h2 class="section-title">IB / CAS</h2>
+            <div class="ib-content">
+                <h3>Międzynarodowa Matura (IB Diploma Programme)</h3>
+                <p>Dwuletni program nauczania realizowany w ostatnich klasach liceum, zakończony egzaminem uznawanym na całym świecie. Program jest prowadzony w języku obcym (zwykle angielskim) i składa się z sześciu przedmiotów, kursu teorii wiedzy (TOK), eseju oraz programu CAS (Creativity, Activity, Service).</p>
+                
+                <p>Nasz projekt jest również w ramach przedmiotu CAS, który realizujemy z myślą o innych oraz o planecie.</p>
+                
+                <h3>Kluczowe cechy projektu CAS:</h3>
+                <div class="cas-points">
+                    <div class="cas-point">
+                        <h4>Rozwój osobisty</h4>
+                        <p>CAS jest okazją do wyjścia poza ramy akademickie i rozwijania umiejętności takich jak przywództwo, empatia, organizacja i świadomość społeczna.</p>
+                    </div>
+                    <div class="cas-point">
+                        <h4>Współpraca</h4>
+                        <p>Wiele działań CAS odbywa się w grupach, co pozwala na rozwijanie umiejętności współpracy i pracy zespołowej.</p>
+                    </div>
+                    <div class="cas-point">
+                        <h4>Refleksja</h4>
+                        <p>Poza realizacją zadań, kluczowe jest refleksja nad całym procesem – od planowania, przez realizację, po osiągnięcie wyników.</p>
+                    </div>
+                </div>
+                
+                <p><strong>Pracując razem, nabieramy umiejętności, które z chęcią wykorzystamy w przyszłych profesjach, oraz nauczymy innych jak z nich korzystać.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja kontakt -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Kontakt</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p style="margin-bottom: 30px;">Masz pomysł na kolejny odcinek? Chcesz podzielić się swoją historią zawodową? A może masz pytania dotyczące wyboru ścieżki kariery? Napisz do nas!</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>kompas.zawodowy9@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>@kompas.zawodowy</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                        <div>
+                            <h4>TikTok</h4>
+                            <p>@kompas.zawodowy1234</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-spotify"></i>
+                        </div>
+                        <div>
+                            <h4>Spotify</h4>
+                            <p>@KompasZawodowy</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/kompas.zawodowy?igsh=cWl1b3U2bWtpMnRq&utm_source=qr" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@kompas.zawodowy1234" class="social-link" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="mailto:kompas.zawodowy9@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/3JYew2MxhuUUfEzDKaLspa?si=1a5f248ba1864438" class="social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 20px; color: var(--primary);">Napisz do nas</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Imię i nazwisko</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adres email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Temat</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Wiadomość</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Napisz do nas, aby wysłać pomysł..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">Wyślij wiadomość</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="footer-logo">Kompas Zawodowy</a>
+                <p>Projekt społeczny w ramach Zwolnieni z Teorii</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Kompas Zawodowy. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
