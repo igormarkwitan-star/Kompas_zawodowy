@@ -273,7 +273,7 @@
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Imię i nazwisko</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" required pattern="[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\s\-]+">
                         </div>
                         
                         <div class="form-group">
@@ -283,7 +283,7 @@
                         
                         <div class="form-group">
                             <label for="subject">Temat</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <input type="text" id="subject" name="subject" required pattern="[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż0-9\s\-\.\,\?\!]+">
                         </div>
                         
                         <div class="form-group">
@@ -296,10 +296,10 @@
                             <label for="rodo" id="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych</label>
                         </div>
 
-                        <div class="xsukax-captcha" style="display: none;" id="captcha"></div>
+                        <div class="xsukax-captcha" style="display: none;" id="captcha" onchange="pojawienie(2)"></div>
 
 
-                        <button type="submit" class="btn" style="width: 100%; display: none;">Wyślij wiadomość</button>
+                        <button type="submit" class="btn" style="width: 100%; display: none;" id="submit">Wyślij wiadomość</button>
                     </form>
                 </div>
             </div>
