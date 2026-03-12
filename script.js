@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(function(response) {
                     console.log("Sukces:", response);
                     alert("Dziękujemy za wiadomość! Odpowiemy najszybciej jak to możliwe.");
-                    contactForm.reset();
+                    location.reload();
                 })
                 .catch(function(error) {
                     console.error("Błąd:", error);
@@ -179,3 +179,4 @@ function pojawienie(numer) {
         }
     }
 }
+
