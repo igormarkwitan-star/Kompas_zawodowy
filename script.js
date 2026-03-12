@@ -108,11 +108,74 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+let czyCaptcha = false;
+// Dodaję observer na status captcha
+document.addEventListener('DOMContentLoaded', () => {
+    const submit = document.getElementById('submit');
+    
+    // Funkcja do sprawdzania statusu
+    function checkCaptchaStatus() {
+        const captchaStatus = document.querySelector('.xsukax-captcha-status');
+        if (captchaStatus && submit) {
+            console.log('Status captcha:', captchaStatus.innerText); // debug
+            
+            if (captchaStatus.innerText.includes('success') || 
+                captchaStatus.innerText.includes('Verification successful')) {
+                submit.style.display = 'block';
+                czyCaptcha=true
+                return true;
+            } else {
+                submit.style.display = 'none';
+                return false;
+            }
+        }
+        return false;
+    }
+    
+    // Sprawdź od razu (może już istnieje)
+    if (!checkCaptchaStatus()) {
+        // Jeśli nie ma, obserwuj całe body na pojawienie się elementu
+        const bodyObserver = new MutationObserver(() => {
+            if (checkCaptchaStatus()) {
+                bodyObserver.disconnect(); // przestań obserwować gdy znajdzie
+            }
+        });
+        
+        bodyObserver.observe(document.body, { 
+            childList: true, 
+            subtree: true 
+        });
+    }
+    
+    // Dodatkowo: jeśli captcha jest już widoczna, ale status się zmienia
+    const existingStatus = document.querySelector('.xsukax-captcha-status');
+    if (existingStatus && submit) {
+        const observer = new MutationObserver(() => {
+            checkCaptchaStatus();
+        });
+        
+        observer.observe(existingStatus, { 
+            childList: true, 
+            subtree: true, 
+            characterData: true 
+        });
+    }
+});
 
 function pojawienie(numer) {
-    if (numer==1) {
-        const captcha = document.getElementById('captcha')
-        let czy = document.getElementById('rodoCheck').value
-        if (czy)
+    if (numer == 1) {
+        const captcha = document.getElementById('captcha');
+        const czy = document.getElementById('rodoCheck');
+        const submit = document.getElementById('submit');
+        
+        if (czy.checked) {
+            captcha.style.display = 'block';
+            if (czyCaptcha) {
+                submit.style.display = 'block';
+            }
+        } else {
+            captcha.style.display = 'none';
+            submit.style.display = 'none';
+        }
     }
 }
