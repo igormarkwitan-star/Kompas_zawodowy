@@ -133,16 +133,16 @@
                         <h3>Aktor</h3>
                     </div>
                     <div class="profession-body">
-                        <p>Rozmowa z Maciekiem Musiałem, akterem teatru i kinematografii, który podzielił się swoim doświadczeniem związanym z życiem w branży artystycznej.</p>
+                        <p>Serdecznie zapraszamy do wysłuchania wywiadu z aktorem Maciejem Musiałem o tym, jak naprawdę wygląda praca w świecie filmu i telewizji. Nasz gość opowiada o swojej drodze do zawodu, pierwszych rolach oraz o tym, z jakimi wyzwaniami musi mierzyć się aktor na co dzień.Czy aktorstwo to tylko czerwone dywany i reflektory? A może za kulisami kryje się dużo pracy, stresu i wyrzeczeń? W rozmowie dowiecie się, jak wygląda proces castingów, praca na planie filmowym oraz jakie cechy są potrzebne, by odnaleźć się w tej profesji.</p>
                         
                         <div class="profession-quote">
                             <p><i class="fas fa-quote-left"></i> fajny cytacik z gadki z maciusiem</p>
                         </div>
                         
                         <div class="podcast-info">
-                            <p><strong>Tytuł:</strong> tytuł gadki z mackiem na spoti</p>
-                            <!-- OSADZENIE ZE SPOTI <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/7s232tRX2ZfE0dLplIiafG?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
-                            <a href="link do gadki z maćkiem na spoti" class="listen-btn"><i class="fas fa-headphones"></i> Słuchaj podcastu</a>
+                            <p><strong>Tytuł:</strong> Za kamerą i poza nią: Maciej Musiał o aktorstwie</p>
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/0AxLuixA8cLAgGbNxoCu2V?utm_source=generator&t=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <a href="https://open.spotify.com/episode/0AxLuixA8cLAgGbNxoCu2V?si=565f07182f704997" class="listen-btn"><i class="fas fa-headphones"></i> Słuchaj podcastu</a>
                         </div>
                     </div>
                 </div>        
@@ -275,32 +275,39 @@
                             <label for="name">Imię i nazwisko</label>
                             <input type="text" id="name" name="name" required pattern="[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\s\-]+">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email">Adres email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="subject">Temat</label>
                             <input type="text" id="subject" name="subject" required pattern="[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż0-9\s\-\.\,\?\!]+">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message">Wiadomość</label>
                             <textarea id="message" name="message" rows="5" required placeholder="Napisz do nas, aby wysłać pomysł..."></textarea>
                         </div>
-                        
+
                         <div class="form-group" id="rodoDiv">
                             <input type="checkbox" id="rodoCheck" name="rodo" required onclick="pojawienie(1)">
                             <label for="rodo" id="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych</label>
                         </div>
-
-                        <div class="xsukax-captcha" style="display: none;" id="captcha" onchange="pojawienie(2)"></div>
-
+                    
+                        <div class="xsukax-captcha" style="display: none;" id="captcha"></div>
 
                         <button type="submit" class="btn" style="width: 100%; display: none;" id="submit">Wyślij wiadomość</button>
                     </form>
+                    
+                    <!-- Dodajemy element na podziękowanie (początkowo ukryty) -->
+                    <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Dziękujemy za wiadomość!</h3>
+                        <p>Odpowiemy najszybciej jak to możliwe.</p>
+                        <a href="#home" class="btn return-home-btn" onclick="resetFormAndReturn()">Wróć do strony głównej</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -322,16 +329,6 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://xsukax.github.io/xsukax-JS-CAPTCHA/captcha.js"></script>
-    <script>
-        // Opcjonalna walidacja przed wysłaniem
-        document.querySelector('form').addEventListener('submit', function(e) {
-            // Turnstile automatycznie dodaje pole cf-turnstile-response
-            if (!document.querySelector('[name="cf-turnstile-response"]').value) {
-                e.preventDefault();
-                alert('Trwa weryfikacja... spróbuj za chwilę');
-            }
-        });
-    </script>
 </body>
 
 </html>
